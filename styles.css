@@ -1,0 +1,237 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+@media (max-width: 768px) { /* Para pantallas de tamaño mobile */
+    .background-video {
+        width: 100vw;  /* Ocupará el ancho completo del viewport */
+        height: 100vh; /* Ocupará el alto completo del viewport */
+        object-fit: cover;  /* Asegura que cubra todo el contenedor */
+    }
+}
+
+
+@media (min-width: 361px) { /* Para pantallas de tamaño mobile */
+    .background-video {
+        width: 200vh;
+    }
+}
+
+@media (min-width: 361px) { /* Para pantallas de tamaño mobile */
+    html {
+        background-color: #C09FC3;
+    }
+}
+
+.abstodo {
+width: 100%;
+margin:0 auto;
+overflow: visible;
+max-width: 360px;
+}
+
+.background-video {
+    position: fixed; 
+    bottom: 0;  /* Mantiene el video pegado a la base */
+    left: 50%;  /* Centra el video horizontalmente */
+    transform: translateX(-50%); /* Ajusta la posición para centrar */
+    width: 50vh;  /* Cambia este valor para aumentar o disminuir el ancho */
+    height: auto; /* Mantiene la proporción del video */
+    object-fit: cover; 
+    z-index: 0; /* Asegura que el video esté por encima de la imagen de fondo */
+}
+
+.intro, .cuenta {
+    position: relative; /* Necesario si usas z-index */
+    z-index: 5; /* Asegura que esté por encima del video */
+    margin: 0;
+}
+
+.intro {
+
+font-family: Poppins;
+font-weight: 500;
+color: rgba(171, 73, 204);
+font-size: large;
+display: flex;
+justify-content: center; 
+align-items: center;    
+border: 2px solid rgb(171, 73, 204);
+
+
+width: 90%;
+height: 80%;
+flex-shrink: 0;
+margin-left: 9px;
+margin-right: 6px;
+margin-top: 35.9px;
+
+border-radius: 12px;
+background: rgba(255, 255, 255, 0.90);
+box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+ 
+animation: shake-animation 2s ease-in-out infinite;
+animation-delay: 1s;
+
+}
+
+
+@keyframes shake-animation {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    50% { transform: translateX(5px); }
+    75% { transform: translateX(-5px); }
+    100% { transform: translateX(0); }
+}
+
+.cuenta {
+    display: flex;
+    justify-content: center; 
+    align-items: center;   
+    flex-direction: column; /* Esto apila los elementos verticalmente */
+    
+width: 90%;
+height: 80%;
+    flex-shrink: 0;
+    border-radius: 12px;
+    background: rgba(171, 73, 204, 0.90);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    margin-left: 10px;
+    margin-right: 18.4px;
+    margin-top: 45px;
+    position: relative; /* Asegúrate de que esté en la misma posición */
+}
+
+h1 {
+
+    color: #FFF;
+    font-family: Poppins;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-top: 1px;
+    margin-bottom: 5px;
+}
+
+
+#clock{
+    color: #FFF;
+    text-align: center;
+    font-family: Poppins;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    opacity: 0; /* Inicialmente invisible */
+    transition: opacity 0.5s ease; /* Añade una transición suave */
+    margin-top: 1px;
+    }
+
+    .footer{
+position: fixed;
+bottom: 0;
+
+    }
+
+    .fecha, .lugar, .bebida {
+        position: relative; /* Para mantener su flujo normal */
+        z-index: 3; /* Asegúrate de que estén por encima de .animacionfooter */
+    }
+    
+
+.fecha {
+    color: #FFF;
+    text-align: center;
+    font-family: Poppins;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    width: 313.89px;
+height: 30px;
+flex-shrink: 0;
+margin-left: 20px;
+margin-bottom: 2px;
+}
+
+.lugar {
+    color: #FFF;
+    text-align: center;
+    font-family: Poppins;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+   
+}
+
+
+.bebida {
+    width: 121.589px;
+    height: 27.619px;
+    flex-shrink: 0;
+    border-radius: 5px;
+    background: #533A60;
+    color: #C6B7D3;
+
+text-align: center;
+font-family: Poppins;
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+margin-left: 110px;
+
+margin-bottom: 7px;
+}
+
+
+/* Para pantallas de tamaño mobile */
+@media (max-width: 1080px) {
+    .animacionfooter {
+        width: 100vw;  /* Ocupará el ancho completo del viewport */
+        height: 100vh; /* Ocupará el alto completo del viewport */
+        left: 50%;
+        transform: translateX(-50%); /* Asegúrate de que se centre */
+    }
+}
+
+/* Para pantallas de escritorio */
+@media (min-width: 1081px) {
+    .animacionfooter {
+        display: none; /* Oculta el footer en pantallas de escritorio */
+    }
+}
+
+.animacionfooter {
+    position: fixed;
+    bottom: 0;
+    width: 25.4vw; /* 25% del ancho del viewport */
+    height: 19vh; /* 20% del alto del viewport */
+    
+    left: 0%;
+    transform: translateX(-20%); /* Ajusta la posición para centrar horizontalmente */
+
+    min-width: 420px; /* Ancho mínimo para evitar que se encoja demasiado */
+    min-height: 160px;
+    
+    background-image: linear-gradient(rgb(171, 73, 204), rgb(79, 58, 88));
+    animation-name: animacionfooter;
+    animation-duration: 2.5s;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+    z-index: 1; 
+}
+
+
+
+
+
+
+@keyframes animacionfooter {
+    0% { transform: translateY(0); }
+    25% { transform: translateY(-5px); } /* Cambia de -5px a -3px */
+    50% { transform: translateY(5px); } /* Cambia de 5px a 3px */
+    75% { transform: translateY(-5px); } /* Cambia de -5px a -3px */
+    100% { transform: translateY(0); }
+}

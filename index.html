@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Feliz cumple Rosana!</title>
+</head>
+<body>
+<div class="abstodo">
+<div class="intro">
+        <header>Rosana Nogueira te invita <br>a celebrar su cumpleaños!</header>
+    </div>
+
+<div class="cuenta">
+<h1>Faltan:</h1>
+<div id="clock"></div>
+<script src="countdown.js"></script>
+</div>
+
+   
+    <section class="footer">
+
+    <div class="fecha">
+        <p>El 11/10/24 a las 22:00hs.</p>
+    </div>
+
+    <div class="lugar">
+        <p>En Salón CUNE (Av. Castelli 1001)</p>
+    </div>
+
+    <div class="bebida">
+        <p>Traer bebida!</p>
+    </div>
+
+    <div class="animacionfooter"></div>
+
+    <video class="background-video" autoplay muted loop>
+        <source src="imgvid/000024.mp4" type="video/mp4">
+    </video>
+
+</section>
+
+<script>
+        const sonido = new Audio('audio/cancion.mp3');
+
+        document.addEventListener('click', () => {
+            sonido.play().catch((error) => {
+                console.error("Error al intentar reproducir el sonido:", error);
+            });
+        });
+    </script>
+
+</div>
+</body>
+</html>
